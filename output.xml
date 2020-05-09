@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.2 on darwin)" generated="20200506 23:25:19.678" rpa="false">
+<suite id="s1" name="Robot Framework" source="/Volumes/PD400/Sekolah-QA/Project/robot-Framework/Robot_Framework.robot">
+<test id="s1-t1" name="TC_Navigate_To_URL">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200506 23:25:19.936" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200506 23:25:19.936" endtime="20200506 23:25:32.190"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:19.935" endtime="20200506 23:25:32.190" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC_Login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20200506 23:25:32.195" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20200506 23:25:32.194" endtime="20200506 23:25:32.366"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20200506 23:25:32.367" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20200506 23:25:32.412" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200506 23:25:32.482" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200506 23:25:32.367" endtime="20200506 23:25:32.482"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20200506 23:25:32.482" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20200506 23:25:32.482" endtime="20200506 23:25:35.058"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:32.192" endtime="20200506 23:25:35.059" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC_SearchUserByType">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MenuAdminModule}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:35.062" level="INFO">Clicking element 'id=menu_admin_viewAdminModule'.</msg>
+<status status="PASS" starttime="20200506 23:25:35.061" endtime="20200506 23:25:39.474"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${SelectUserType}</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20200506 23:25:39.475" level="INFO">Selecting options from selection list 'id=searchSystemUser_userType' by label Admin.</msg>
+<status status="PASS" starttime="20200506 23:25:39.474" endtime="20200506 23:25:39.556"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BtnSearch}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:39.557" level="INFO">Clicking button 'id=searchBtn'.</msg>
+<status status="PASS" starttime="20200506 23:25:39.556" endtime="20200506 23:25:40.544"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:35.060" endtime="20200506 23:25:40.545" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TC_AddNationality">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${MenuAdminModule}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:40.548" level="INFO">Simulating Mouse Over on element 'id=menu_admin_viewAdminModule'.</msg>
+<status status="PASS" starttime="20200506 23:25:40.547" endtime="20200506 23:25:40.848"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${AdminNationality}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:40.849" endtime="20200506 23:25:40.874"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${AdminNationality}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:40.875" level="INFO">Clicking element 'id=menu_admin_nationality'.</msg>
+<status status="PASS" starttime="20200506 23:25:40.875" endtime="20200506 23:25:42.550"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Sleep</arg>
+<arg>3s</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:42.550" endtime="20200506 23:25:42.551"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>id=btnAdd</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:42.551" endtime="20200506 23:25:42.588"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnAdd</arg>
+</arguments>
+<msg timestamp="20200506 23:25:42.589" level="INFO">Clicking button 'id=btnAdd'.</msg>
+<status status="PASS" starttime="20200506 23:25:42.588" endtime="20200506 23:25:42.654"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=nationality_name</arg>
+<arg>AAA Nationality</arg>
+</arguments>
+<msg timestamp="20200506 23:25:42.655" level="INFO">Typing text 'AAA Nationality' into text field 'id=nationality_name'.</msg>
+<status status="PASS" starttime="20200506 23:25:42.655" endtime="20200506 23:25:42.860"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnSave</arg>
+</arguments>
+<msg timestamp="20200506 23:25:42.861" level="INFO">Clicking button 'id=btnSave'.</msg>
+<status status="PASS" starttime="20200506 23:25:42.861" endtime="20200506 23:25:46.715"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200506 23:25:49.717" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200506 23:25:46.715" endtime="20200506 23:25:49.718"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=resultTable</arg>
+<arg>AAA Nationality</arg>
+</arguments>
+<msg timestamp="20200506 23:25:50.094" level="INFO">Element 'id=resultTable' contains text 'AAA Nationality'.</msg>
+<status status="PASS" starttime="20200506 23:25:49.718" endtime="20200506 23:25:50.094"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:40.546" endtime="20200506 23:25:50.095" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TC_SubMenuHover">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${MenuAdminModule}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:50.096" endtime="20200506 23:25:50.120"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${MenuAdminModule}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:50.121" level="INFO">Simulating Mouse Over on element 'id=menu_admin_viewAdminModule'.</msg>
+<status status="PASS" starttime="20200506 23:25:50.120" endtime="20200506 23:25:50.397"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${AdminQualification}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:50.397" endtime="20200506 23:25:50.423"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${AdminQualification}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:50.423" level="INFO">Simulating Mouse Over on element 'id=menu_admin_Qualifications'.</msg>
+<status status="PASS" starttime="20200506 23:25:50.423" endtime="20200506 23:25:50.698"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=menu_admin_viewEducation</arg>
+</arguments>
+<msg timestamp="20200506 23:25:50.699" level="INFO">Clicking element 'id=menu_admin_viewEducation'.</msg>
+<status status="PASS" starttime="20200506 23:25:50.698" endtime="20200506 23:25:52.886"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:50.095" endtime="20200506 23:25:52.887" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TC_Logout">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NavWelcome}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:52.889" level="INFO">Clicking element 'id=welcome'.</msg>
+<status status="PASS" starttime="20200506 23:25:52.889" endtime="20200506 23:25:52.972"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LinkLogout}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 23:25:52.973" endtime="20200506 23:25:53.004"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200506 23:25:56.007" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200506 23:25:53.005" endtime="20200506 23:25:56.007"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${LinkLogout}</arg>
+</arguments>
+<msg timestamp="20200506 23:25:56.008" level="INFO">Clicking link 'xpath=//*[@id="welcome-menu"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20200506 23:25:56.007" endtime="20200506 23:25:58.203"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:52.888" endtime="20200506 23:25:58.204" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TC_CloseBrowser">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200506 23:25:58.206" endtime="20200506 23:25:58.345"></status>
+</kw>
+<status status="PASS" starttime="20200506 23:25:58.205" endtime="20200506 23:25:58.345" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200506 23:25:19.680" endtime="20200506 23:25:58.347"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="Robot Framework">Robot Framework</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
